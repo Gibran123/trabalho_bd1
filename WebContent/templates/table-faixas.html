@@ -1,0 +1,67 @@
+<div class="container">
+        		
+      		<div class="row">
+      		
+      			<div class="col-sm-2"></div>
+      			
+      			<div class="col-sm-6">
+      			
+      				<input type="text" class="form-control" placeholder="Search for..." ng-model="vm.query">
+      				
+      			</div>
+      			
+      			<div class="col-sm-2">
+      			
+      				<button class="btn btn-default" ng-click="vm.getFaixas()">Submit</button>
+      				
+      			</div>
+      			
+      			<div class="col-sm-2"></div>
+      			
+      		</div>
+      		
+      		<div class="row main" ng-show="vm.showLoad">
+      		
+      			<div class="col-md-5"></div>
+      		
+      			<div class="col-md-2">
+      			
+      				<img src="img/load.gif" width="50px">
+      			
+      			</div>
+      			
+      			<div class="col-md-5"></div>
+      		
+      		</div>
+      		
+      		<div class="row main">
+      		
+				<div class="col-md-12">
+			
+					<table class="table table-responsive" ng-show="vm.faixas.length">
+					
+						<thead>
+						
+							<th>Faixa</th>
+							
+							<th>Compositor</th>
+							
+						</thead>
+						
+						<tbody>
+							<tr ng-repeat="faixa in vm.faixas">
+							
+								<td>{{faixa.description}}</td>
+								
+								<td>{{faixa.songwriters[0].name}}</td>
+								
+							</tr>
+							
+						</tbody>
+						
+					</table>
+				
+				</div>
+			
+		</div>
+</div>
